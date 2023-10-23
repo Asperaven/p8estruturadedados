@@ -33,7 +33,6 @@ class ListaEncadeada:
         ant.prox = novoContato
         novoContato.prox = aux
 
-
     def exibir(self):
         aux = self.inicioLista
         while aux:
