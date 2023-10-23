@@ -20,15 +20,15 @@ class Pilha:
         self.stack.exibir()
 
 
-# Examplo
+# Exemplo
 """minha_pilha = Pilha()
 minha_pilha.empilhar("Item 1")
 minha_pilha.empilhar("Item 2")
 minha_pilha.empilhar("Item 3")"""
 
-print("Pilha:")
-minha_pilha.mostrar()  # Resultado: Item 1, Item 2, Item 3
+#print("Pilha:")
+#minha_pilha.mostrar()  # Resultado: Item 1, Item 2, Item 3
 
-print("Item desempilhado:", minha_pilha.desempilhar())  # Resultado: Item 3
-print("Pilha depois do desempilhamento:")
-minha_pilha.mostrar()  # Output: Item 1, Item 2
+#print("Item desempilhado:", minha_pilha.desempilhar())  # Resultado: Item 3
+#print("Pilha depois do desempilhamento:")
+#minha_pilha.mostrar()  # Output: Item 1, Item 2
