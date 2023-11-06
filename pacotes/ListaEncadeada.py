@@ -1,24 +1,26 @@
 class ListaEncadeada:
     inicioLista = None
+    fimLista = inicioLista
 
-    def adicionar(self, novoContato):
+    def adicionar(self, contato):
         if self.inicioLista is None:
-            self.inicioLista = novoContato
+            self.inicioLista = contato
         else:
-            novoContato.prox = self.inicioLista
-            self.inicioLista = novoContato
+            contato.prox = self.inicioLista
+            self.inicioLista = contato
 
-    def adicionar1(self, novoContato, ind):
+    def adicionar1(self, contato, ind):
         cont = 1
         ant = self.inicioLista
         aux = ant
 
         if (self.inicioLista is None) & ind == 1:
-            self.inicioLista = novoContato
+            self.inicioLista = contato
+            contato.prox = self.fimLista
             return
         elif ind == 1:
-            novoContato.prox = self.inicioLista
-            self.inicioLista = novoContato
+            contato.prox = self.inicioLista
+            self.inicioLista = contato
             return
 
         # VARREDURA
@@ -30,14 +32,15 @@ class ListaEncadeada:
                 break
 
         # QUANDO ENCONTRA POSICAO --> INSERE
-        ant.prox = novoContato
-        novoContato.prox = aux
+        ant.prox = contato
+        contato.prox = aux
 
     def exibir(self):
         aux = self.inicioLista
         while aux:
             print(aux.nome)
             aux = aux.prox
+
 
     def deletar(self, contato):
         aux = self.inicioLista
